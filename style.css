@@ -16,18 +16,21 @@ body
 {
     background: black;
     text-align: center;
+    padding: 1mm;
 }
 .menu-bar ul
 {
     display: inline-flex;
     list-style: none;
     color: white;
+
 }
 .menu-bar ul li
 {
     width: 100px;
     margin: 10px;
     padding: 15px;
+
 }
 .menu-bar ul li a
 {
@@ -94,4 +97,60 @@ home{
 .home .row .books-slider a:hover img{
     transform: scale(.9);
 }
+.home .row .books-slider div img{
+    height: 25rem;
+    margin-right: 25rem;
 
+}
+.home .row .books-slider div .carousel-item {
+    background-color: gainsboro;
+    width:1561px;
+    height: 453px;
+
+}
+.home .row .books-slider div .carousel-item h1{
+    margin-top: 12rem;
+}
+
+.home .row .books-slider div .carousel-item img{
+    float: right;
+}
+.home .row .books-slider div .carousel-item h2{
+    margin-top: 12rem;
+}
+.form-group{
+
+    width:500px;
+    padding:50px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: rosybrown;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rosybrown;
+}
+
+div form {
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 20px;
+}

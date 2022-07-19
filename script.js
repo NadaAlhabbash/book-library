@@ -4,57 +4,45 @@ let books =[
         title: "book1",
         author: "John Doe",
         edition: 12,
-        image: "img/book-4.png"
+        image: "img/book-1.png"
     },
     {
-        title: "book1",
-        author: "John Doe",
-        edition: 12,
-        image: "img/book-4.png"
+        title: "book2",
+        author: "sherlock",
+        edition: 5,
+        image: "img/book-3.png"
     }
+
 ]
-/*
-<section class="home" id="home">
 
-    <div class="row">
-        <div class="books-slider">
-            <div>
-                <a href="#" ><img src="img/book-1.png" alt=""></a>
-                <a href="#" ><img src="img/book-2.png" alt=""></a>
-                <a href="#" ><img src="img/book-3.png" alt=""></a>
-<!--            <a href="#" ><img src="img/book-4.png" alt=""></a>-->
-<!--            <a href="#" ><img src="img/book-5.png" alt=""></a>-->
-<!--            <a href="#" ><img src="img/book-6.png" alt=""></a>-->
-            </div>
-            <img src="img/stand.png" class="stand" alt="">
-        </div>
 
-    </div>
-movieTable.setAttribute("class", "table table-striped");
-</section>
-*/
- //CREATING THE SECTION ELEMENT
-// const book= document.getElementById("book")
-books.map(()=> {
-let section = document.createElement("section")
-let div1 = document.createElement("div")
-let div2 = document.createElement("div")
-let div3 = document.createElement("div")
-let a = document.createElement("a")            //I think we should loop it
-let bookShelf = document.createElement("img")
 
-section.setAttribute("class", "home")
-div1.setAttribute("class", "row")
-div2.setAttribute("class", "books-slider")
-a.setAttribute("href","#")
-// a.innerHTML=1
-section.appendChild(div1)
-div1.appendChild(div2)
-div2.appendChild(div3)
-div3.appendChild(a)
-div2.appendChild(bookShelf)
-// book.appendChild(div1)
+ function createlement(el){
+     let div5 = document.createElement("div")
+     div5.setAttribute("class", "carousel-item")
+     let image = document.createElement("img")
+     let title = document.createElement("h2")
+     let author = document.createElement("p")
+     let edition = document.createElement("p")
+     let button = document.createElement("button")
+     button.setAttribute("class", "btn btn-warning")
+     let i = document.createElement("i")
+     i.setAttribute("class", "fa fa-star")
+     image.src=el.image
+     title.innerText=el.title
+     author.innerText=el.author
+     edition.innerText=el.edition
 
-document.getElementById("home").appendChild(section);
-})
+     div5.appendChild(image)
+     div5.appendChild(title)
+     div5.appendChild(author)
+     div5.appendChild(edition)
+     button.appendChild(i)
+     div5.appendChild(button)
+
+     document.getElementById("slider").appendChild(div5);
+
+}
+books.map((el)=>{createlement(el)});
+
 
