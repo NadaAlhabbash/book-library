@@ -1,0 +1,97 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url("img/banner-bg.jpg");
+    background-size:cover ;
+    background-position: center ;
+    font-family: sans-serif;
+}
+.menu-bar
+{
+    background: black;
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li
+{
+    width: 100px;
+    margin: 10px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+  text-decoration: none;
+    color:white ;
+
+}
+.active, .menu-bar ul li:hover
+{
+    align-items: center;
+    background:rosybrown ;
+    border-radius: 3px;
+}
+.menu-bar .fa
+{
+    margin-right:8px;
+}
+
+.btn {
+    text-decoration: none;
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.6rem 1rem;
+    border-radius: .5rem;
+    color:#fff;
+    background:rosybrown;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight:50;
+}
+
+/*.btn:hover{*/
+/*    background:rosybrown;*/
+/*}*/
+section{
+    padding: 5rem 9%;
+}
+home{
+
+    background-size: cover;
+    background-position: center;
+}
+
+.home .row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.home .row .content{
+    flex:1 1 42rem;
+}
+
+.home .row .books-slider{
+    flex:1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.home .row .books-slider a img{
+    height: 25rem;
+}
+.home .row .books-slider a:hover img{
+    transform: scale(.9);
+}
+
