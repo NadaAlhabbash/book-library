@@ -1,7 +1,7 @@
 //first defining our array
 
 
-
+// const fav=document.getElementById("favbook");
  function createlement(el){
      const div5 = document.createElement("div")
      div5.setAttribute("class", "carousel-item")
@@ -36,7 +36,13 @@
 
 
      button.addEventListener("click",e=>{
-         addToFavourite(el)
+         let c = JSON.parse(localStorage.getItem("favourites")) || [];
+         console.log(c);
+         c.push(el)
+         localStorage.setItem("favourites",JSON.stringify(c))
+
+         let j = JSON.parse(localStorage.getItem("favourites")) || [];
+         console.log(j)
      })
 
      p.addEventListener("click",deletebook())
