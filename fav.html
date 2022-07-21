@@ -28,26 +28,48 @@
 
     <div class="row">
         <div class="books-slider">
-            <span>
-            <img src="img/book-1.png" alt="">
-            <h2>book title</h2>
-            <p>Author</p>
-            <p>Edition</p>
-            <button type="button" class="btn btn-warning" id=favbtn>
-                <i class="fa fa-star"></i>
-            </button>
-             <p class="delete-book" id="delete-book">x</p>
-</span>
 
+
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- The slideshow/carousel -->
+                <div id="favbook" class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Welcome to the book list</h1>
                     </div>
+                    <!--                    <div class="carousel-item" id="book">-->
+                    <!--                        <img src="img/book-1.png" alt="">-->
+                    <!--                        <h2>book title</h2>-->
+                    <!--                        <p>Author</p>-->
+                    <!--                        <p>Edition</p>-->
+                    <!--                        <button type="button" class="btn btn-warning" id=favbtn>-->
+                    <!--                            <i class="fa fa-star"></i>-->
+                    <!--                        </button>-->
+                    <!--                        <p class="delete-book" id="delete-book">x</p>-->
+                    <!--                    </div>-->
 
                 </div>
 
-            </section>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <br>
+            <img src="img/stand.png" class="stand" alt="">
+        </div>
+
+    </div>
 
 
-            <script src="fav.js"></script>
+</section>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-            </body>
-            </html>
+
+<script src="books.js"></script>
+<script src="fav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
