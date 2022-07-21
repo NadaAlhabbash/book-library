@@ -154,3 +154,7 @@ div form {
     border-radius: 5px;
     padding: 20px;
 }
+.delete-book{
+   color: red;
+    cursor: pointer;
+}
