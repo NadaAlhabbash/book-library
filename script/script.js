@@ -48,12 +48,24 @@ let books =[
      document.getElementById("slider").appendChild(div5);
 
      button.addEventListener("click",e=>{
-         let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-         // console.log(favourites);
-         favourites.push(el)
-         localStorage.setItem("favourites",JSON.stringify(favourites))
-         favouriteCard(favourites)
 
+         let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+             console.log(favourites);
+
+
+         const isFound = favourites.some(element => {
+             if (element.id === el.id) {
+                 return true;
+             }
+         });
+         if(!isFound){
+             favourites.push(el)
+             localStorage.setItem("favourites", JSON.stringify(favourites))
+             favouriteCard(favourites)
+         }
+         else {
+             alert("Book already exists");
+         }
      })
 
      p.addEventListener("click",e=>{
@@ -79,4 +91,3 @@ document.getElementById("newbook").addEventListener("click", (e) =>{
     createlement(newbook)
 
 } )
-
