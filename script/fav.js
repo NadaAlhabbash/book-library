@@ -1,7 +1,6 @@
 const a = document.getElementById("bookscard");
 function favouriteCard(el){
-    console.log(el)
-     console.log('hi')
+    // console.log(el)
     /*
     *
     *             <div class="card">
@@ -17,9 +16,9 @@ function favouriteCard(el){
 
     *
     * */
-
     const div = document.createElement("div")
     div.setAttribute("class", "card")
+    div.setAttribute("id", "card")
     const image = document.createElement("img")
     div.setAttribute("style", "width:100%")
     const div2 = document.createElement("div")
@@ -44,44 +43,22 @@ function favouriteCard(el){
     div2.appendChild(author)
     div2.appendChild(edition)
     div2.appendChild(i)
-
-    // i.addEventListener("click", e=>{
-    //     deleteFavouriteBook(el)
-    // })
-
     a.appendChild(div)
 
-
-//     button.appendChild(i)
-//     div5.appendChild(button)
-//     div5.appendChild(p)
-//     ae.appendChild(div5)
-//
-//
-//
       i.addEventListener("click",e=> {
           deleteFavouriteBook(el.id)
       })
-//
-//
-//
-//
 }
-//
-// // console.log(favourites)
-//
+
 let lk = JSON.parse(localStorage.getItem("favourites")) || [];
 console.log(lk);
 lk.map((el)=> favouriteCard(el));
-//
-//
+
 function deleteFavouriteBook(removed){
-    console.log(removed)
     favourites = JSON.parse(localStorage.getItem("favourites")) || [];
     console.log(favourites)
     favourites = favourites.filter((el)=>el.id!==removed)
     localStorage.setItem("favourites",JSON.stringify(favourites))
-    document.getElementById("bookscard").innerHTML=""
+    document.getElementById("card").innerHTML=""
     favouriteCard("favourites")
-
 }

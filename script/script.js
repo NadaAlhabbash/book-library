@@ -47,8 +47,6 @@ let books =[
      div5.appendChild(p)
      document.getElementById("slider").appendChild(div5);
 
-
-
      button.addEventListener("click",e=>{
          let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
          // console.log(favourites);
@@ -58,43 +56,27 @@ let books =[
 
      })
 
-     p.addEventListener("click",deletebook())
+     p.addEventListener("click",e=>{
+         //deletet function
+     })
 
 }
 books.map((el)=>{createlement(el)});
 
-
-
 // getting data from the form
 document.getElementById("newbook").addEventListener("click", (e) =>{
     e.preventDefault()
-    addNewBook(e)
-} )
-
-
-function addNewBook({target:{parentNode}}){
     const title =  document.getElementById("bname").parentNode[0].value;
     const author =  document.getElementById("author").parentNode[1].value;
     const edition =  document.getElementById("edition").parentNode[2].value;
     let image =  document.getElementById("image").parentNode[3].value;
     const path = 'img/'
     image = path.concat(JSON.stringify(image).slice(15,-1))
-    //console.log()
-    //replace("C:...fakepath", "").........(.name;)
     const id=books.length;
     const newbook={id, title, author, edition, image}
     books.push(newbook)
-    console.log(newbook)
+    // console.log(newbook)
     createlement(newbook)
 
-}
+} )
 
-
-
-
-//deleting book from books array
-function deletebook(){
-
-    //
-
-}
