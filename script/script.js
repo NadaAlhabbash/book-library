@@ -4,14 +4,14 @@ let books =[
         title: "book1",
         author: "John Doe",
         edition: 12,
-        image: "img/book-1.png"
+        image: "assets/img/book-1.png"
     },
     {
         id:2,
         title: "book2",
         author: "sherlock",
         edition: 5,
-        image: "img/book-3.png"
+        image: "assets/img/book-3.png"
     }
 ]
 
