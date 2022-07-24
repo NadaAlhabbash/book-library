@@ -19,7 +19,6 @@
 <div class=" menu-bar">
 <ul>
     <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
-    <li><a href="add.html"><i class="fa fa-book"></i>Add</a></li>
     <li><a href="fav.html"><i class="fa fa-star"></i>Fav</a></li>
 </ul>
 </div>
@@ -60,6 +59,48 @@
             </div>
             <br>
             <img src="img/stand.png" class="stand" alt="">
+
+
+            <div class="container mt-5">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <i class="fa fa-plus"></i>
+                </button>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add Book</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="index.html" id="add-book">
+                                    <strong><label >Book Name</label></strong>
+                                    <input type="text" id="bname" name="bname" placeholder="book name..">
+
+                                    <strong><label >Author</label></strong>
+                                    <input type="text" id="author" name="author" placeholder="author name..">
+
+                                    <strong><label >Edition</label></strong>
+                                    <input type="text" id="edition" name="edition" placeholder="edition..">
+
+                                    <strong><label >Image</label></strong>
+                                    <br>
+                                    <input type="file" id="image" name="image" placeholder="add image.." >
+                                    <br>
+                                    <br>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="newbook" class="btn btn-info" data-bs-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
 
     </div>
@@ -67,9 +108,9 @@
 </section>
 
 
-<script src="books.js"></script>
+<!--<script src="add.js"></script>-->
 <script src="script.js"></script>
-<!--<script src="fav.js"></script>-->
+<script src="fav.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
