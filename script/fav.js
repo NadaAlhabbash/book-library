@@ -10,19 +10,19 @@ function favouriteCard(el){
                     <p>Author</p>
                     <p>edition</p>
                     <i class="fa fa-trash"></i>
-
                 </div>
             </div>
-
     *
     * */
+
+
     const div = document.createElement("div")
     div.setAttribute("class", "card")
     div.setAttribute("id", "card")
     const image = document.createElement("img")
-    div.setAttribute("style", "width:100%")
+    // div.setAttribute("style", "width:100%")
     const div2 = document.createElement("div")
-    div.setAttribute("class", "container")
+    // div2.setAttribute("class", "container")
     const title = document.createElement("h4")
     const author = document.createElement("p")
     const b = document.createElement("b")
@@ -36,7 +36,7 @@ function favouriteCard(el){
     author.innerText=el.author
     edition.innerText=el.edition
 
-    div.appendChild(image)
+    div2.appendChild(image)
     div.appendChild(div2)
     div2.appendChild(title)
     title.appendChild(b)
@@ -51,7 +51,7 @@ function favouriteCard(el){
 }
 
 let lk = JSON.parse(localStorage.getItem("favourites")) || [];
-console.log(lk);
+// console.log(lk);
 lk.map((el)=> favouriteCard(el));
 
 function deleteFavouriteBook(removed){
@@ -60,5 +60,10 @@ function deleteFavouriteBook(removed){
     favourites = favourites.filter((el)=>el.id!==removed)
     localStorage.setItem("favourites",JSON.stringify(favourites))
     document.getElementById("card").innerHTML=""
-    favouriteCard("favourites")
-}
+    favourites.map(el=>{
+            favouriteCard(el)
+
+        }
+    )
+
+} 
