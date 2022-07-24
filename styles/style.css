@@ -7,7 +7,7 @@
 }
 body
 {
-    background-image: url("img/banner-bg.jpg");
+    background-image: url("../assets/img/banner-bg.jpg");
     background-size:cover ;
     background-position: center ;
     font-family: sans-serif;
