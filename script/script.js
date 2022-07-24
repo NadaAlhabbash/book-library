@@ -1,19 +1,19 @@
-// let books =[
-//     {
-//         id:1,
-//         title: "book1",
-//         author: "John Doe",
-//         edition: 12,
-//         image: "img/book-1.png"
-//     },
-//     {
-//         id:2,
-//         title: "book2",
-//         author: "sherlock",
-//         edition: 5,
-//         image: "img/book-3.png"
-//     }
-// ]
+let books =[
+    {
+        id:1,
+        title: "book1",
+        author: "John Doe",
+        edition: 12,
+        image: "img/book-1.png"
+    },
+    {
+        id:2,
+        title: "book2",
+        author: "sherlock",
+        edition: 5,
+        image: "img/book-3.png"
+    }
+]
 
  function createlement(el){
      const div5 = document.createElement("div")
@@ -47,8 +47,6 @@
      div5.appendChild(p)
      document.getElementById("slider").appendChild(div5);
 
-
-
      button.addEventListener("click",e=>{
          let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
          // console.log(favourites);
@@ -58,49 +56,27 @@
 
      })
 
-     p.addEventListener("click",deletebook())
+     p.addEventListener("click",e=>{
+         //deletet function
+     })
 
 }
-
-
-
+books.map((el)=>{createlement(el)});
 
 // getting data from the form
-document.getElementById("newbook").addEventListener("click", e =>{
+document.getElementById("newbook").addEventListener("click", (e) =>{
     e.preventDefault()
-    let books = JSON.parse(localStorage.getItem("books")) || [];
-    // console.log(favourites);
-    localStorage.setItem("books",JSON.stringify(books))
-    books.push(newbook)
-    addNewBook(e)
-} )
-
-
-function addNewBook({target:{parentNode}}){
-
     const title =  document.getElementById("bname").parentNode[0].value;
     const author =  document.getElementById("author").parentNode[1].value;
     const edition =  document.getElementById("edition").parentNode[2].value;
     let image =  document.getElementById("image").parentNode[3].value;
     const path = 'img/'
     image = path.concat(JSON.stringify(image).slice(15,-1))
-    //console.log()
-    //replace("C:...fakepath", "").........(.name;)
     const id=books.length;
     const newbook={id, title, author, edition, image}
-
-    console.log(newbook)
+    books.push(newbook)
+    // console.log(newbook)
     createlement(newbook)
-    books.map((el)=>{createlement(el)});
 
-}
+} )
 
-
-
-
-//deleting book from books array
-function deletebook(){
-
-    //
-
-}
