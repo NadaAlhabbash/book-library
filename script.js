@@ -1,19 +1,19 @@
-// let books =[
-//     {
-//         id:1,
-//         title: "book1",
-//         author: "John Doe",
-//         edition: 12,
-//         image: "img/book-1.png"
-//     },
-//     {
-//         id:2,
-//         title: "book2",
-//         author: "sherlock",
-//         edition: 5,
-//         image: "img/book-3.png"
-//     }
-// ]
+let books =[
+    {
+        id:1,
+        title: "book1",
+        author: "John Doe",
+        edition: 12,
+        image: "img/book-1.png"
+    },
+    {
+        id:2,
+        title: "book2",
+        author: "sherlock",
+        edition: 5,
+        image: "img/book-3.png"
+    }
+]
 
  function createlement(el){
      const div5 = document.createElement("div")
@@ -61,23 +61,18 @@
      p.addEventListener("click",deletebook())
 
 }
-
+books.map((el)=>{createlement(el)});
 
 
 
 // getting data from the form
-document.getElementById("newbook").addEventListener("click", e =>{
+document.getElementById("newbook").addEventListener("click", (e) =>{
     e.preventDefault()
-    let books = JSON.parse(localStorage.getItem("books")) || [];
-    // console.log(favourites);
-    localStorage.setItem("books",JSON.stringify(books))
-    books.push(newbook)
     addNewBook(e)
 } )
 
 
 function addNewBook({target:{parentNode}}){
-
     const title =  document.getElementById("bname").parentNode[0].value;
     const author =  document.getElementById("author").parentNode[1].value;
     const edition =  document.getElementById("edition").parentNode[2].value;
@@ -88,10 +83,9 @@ function addNewBook({target:{parentNode}}){
     //replace("C:...fakepath", "").........(.name;)
     const id=books.length;
     const newbook={id, title, author, edition, image}
-
+    books.push(newbook)
     console.log(newbook)
     createlement(newbook)
-    books.map((el)=>{createlement(el)});
 
 }
 
